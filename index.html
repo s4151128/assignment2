@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+  <title> My Icon</title>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+  
+  <style>
+    .row {
+      width: 720px;
+      margin: 10px auto 10px auto;
+    }
+    
+    .image-container {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 20px;
+    }
+    
+    .image-container img {
+      transition: transform 0.3s ease; 
+    }
+    
+    .image-container img:hover {
+      transform: translateY(-10px) scale(1.05); 
+    }
+  </style>
+</head>
+
+<body style = "background-color: rgb(252, 232, 207);">
+  <div class="row">
+    <div class="image-container"><img id="img1" src="image/Lotus Flower.png" width="250" /></div>
+    <div class="image-container"><img id="img2" src="image/Leaf.png" width="250" /></div>
+    <div class="image-container"><img id="img3" src="image/Raindrops.png" width="250" /></div>
+  </div>
+
+  <div class="row">
+    <div class="image-container"><img id="img4" src="image/Candle.png" width="250" /></div>
+    <div class="image-container"><img id="img5" src="image/Wind Chimes.png" width="250" /></div>
+    <div class="image-container"><img id="img6" src="image/Cloud.png" width="250" /></div>
+  </div>
+
+  <div class="row">
+    <div class="image-container"><img id="img7" src="image/Meditation Silhouette.png" width="250" /></div>
+    <div class="image-container"><img id="img8" src="image/Handpan.png" width="250" /></div>
+    <div class="image-container"><img id="img9" src="image/Wooden Fish.png" width="250" /></div>
+  </div>
+  
+  <script>
+    var sound1 = new buzz.sound("sound/lotus.mp3");
+    var sound2 = new buzz.sound("sound/leaf.mp3");
+    var sound3 = new buzz.sound("sound/raindrop.mp3");
+    var sound4 = new buzz.sound("sound/candle.mp3");
+    var sound5 = new buzz.sound("sound/wind-chimes.mp3");
+    var sound6 = new buzz.sound("sound/cloud.mp3");
+    var sound7 = new buzz.sound("sound/meditation.mp3");
+    var sound8 = new buzz.sound("sound/handpan.mp3");
+    var sound9 = new buzz.sound("sound/wooden fish.mp3");
+
+    window.onload = function () {
+      document.getElementById('img1').addEventListener('click', function () { sound1.play(); });
+      document.getElementById('img2').addEventListener('click', function () { sound2.play(); });
+      document.getElementById('img3').addEventListener('click', function () { sound3.play(); });
+      document.getElementById('img4').addEventListener('click', function () { sound4.play(); });
+      document.getElementById('img5').addEventListener('click', function () { sound5.play(); });
+      document.getElementById('img6').addEventListener('click', function () { sound6.play(); });
+      document.getElementById('img7').addEventListener('click', function () { sound7.play(); });
+      document.getElementById('img8').addEventListener('click', function () { sound8.play(); });
+      document.getElementById('img9').addEventListener('click', function () { sound9.play(); });
+    }
+  </script>
+</body>
+
+</html>
